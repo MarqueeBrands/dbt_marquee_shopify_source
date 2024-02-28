@@ -1,6 +1,6 @@
 with base as (
 
-    select * 
+    select *
     from {{ ref('stg_shopify__customer_tmp') }}
 
 ),
@@ -8,7 +8,7 @@ with base as (
 fields as (
 
     select
-    
+
         {{
             fivetran_utils.fill_staging_columns(
                 source_columns=adapter.get_columns_in_relation(ref('stg_shopify__customer_tmp')),
@@ -17,8 +17,8 @@ fields as (
         }}
 
         {{ fivetran_utils.source_relation(
-            union_schema_variable='shopify_union_schemas', 
-            union_database_variable='shopify_union_databases') 
+            union_schema_variable='shopify_union_schemas',
+            union_database_variable='shopify_union_databases')
         }}
 
     from base
@@ -27,7 +27,7 @@ fields as (
 
 final as (
 
-    select 
+    select
         id as customer_id,
         lower(email) as email,
         first_name,
@@ -40,12 +40,13 @@ final as (
         total_spent,
         verified_email as is_verified_email,
         note,
+        lifetime_duration,
         currency,
-        case 
+        case
             when email_marketing_consent_state is null then
-                case 
+                case
                     when accepts_marketing is null then null
-                    when accepts_marketing then 'subscribed (legacy)' 
+                    when accepts_marketing then 'subscribed (legacy)'
                     else 'not_subscribed (legacy)' end
             else lower(email_marketing_consent_state) end as marketing_consent_state,
         lower(coalesce(email_marketing_consent_opt_in_level, marketing_opt_in_level)) as marketing_opt_in_level,
@@ -55,12 +56,12 @@ final as (
         {{ dbt_date.convert_timezone(column='cast(updated_at as ' ~ dbt.type_timestamp() ~ ')', target_tz=var('shopify_timezone', "UTC"), source_tz="UTC") }} as updated_timestamp,
         {{ dbt_date.convert_timezone(column='cast(_fivetran_synced as ' ~ dbt.type_timestamp() ~ ')', target_tz=var('shopify_timezone', "UTC"), source_tz="UTC") }} as _fivetran_synced,
         source_relation
-        
+
         {{ fivetran_utils.fill_pass_through_columns('customer_pass_through_columns') }}
 
     from fields
-    
+
 )
 
-select * 
+select *
 from final
