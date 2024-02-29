@@ -1,6 +1,6 @@
 with base as (
 
-    select *
+    select * 
     from {{ ref('stg_shopify__order_tmp') }}
 
 ),
@@ -8,7 +8,7 @@ with base as (
 fields as (
 
     select
-
+    
         {{
             fivetran_utils.fill_staging_columns(
                 source_columns=adapter.get_columns_in_relation(ref('stg_shopify__order_tmp')),
@@ -17,8 +17,8 @@ fields as (
         }}
 
         {{ fivetran_utils.source_relation(
-            union_schema_variable='shopify_union_schemas',
-            union_database_variable='shopify_union_databases')
+            union_schema_variable='shopify_union_schemas', 
+            union_database_variable='shopify_union_databases') 
         }}
 
     from base
@@ -27,7 +27,7 @@ fields as (
 
 final as (
 
-    select
+    select 
         id as order_id,
         user_id,
         total_discounts,
@@ -36,7 +36,6 @@ final as (
         total_line_items_price_set,
         total_price,
         total_price_set,
-        total_price_usd,
         total_tax_set,
         total_tax,
         source_name,
@@ -63,7 +62,6 @@ final as (
         lower(email) as email,
         financial_status,
         fulfillment_status,
-        processing_method,
         referring_site,
         billing_address_address_1,
         billing_address_address_2,
@@ -116,7 +114,7 @@ final as (
     from fields
 )
 
-select *
+select * 
 from final
 where not coalesce(is_test_order, false)
 and not coalesce(is_deleted, false)

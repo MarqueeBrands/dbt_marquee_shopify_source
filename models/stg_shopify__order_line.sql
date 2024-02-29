@@ -1,6 +1,6 @@
 with base as (
 
-    select *
+    select * 
     from {{ ref('stg_shopify__order_line_tmp') }}
 
 ),
@@ -8,7 +8,7 @@ with base as (
 fields as (
 
     select
-
+    
         {{
             fivetran_utils.fill_staging_columns(
                 source_columns=adapter.get_columns_in_relation(ref('stg_shopify__order_line_tmp')),
@@ -17,8 +17,8 @@ fields as (
         }}
 
         {{ fivetran_utils.source_relation(
-            union_schema_variable='shopify_union_schemas',
-            union_database_variable='shopify_union_databases')
+            union_schema_variable='shopify_union_schemas', 
+            union_database_variable='shopify_union_databases') 
         }}
 
     from base
@@ -26,14 +26,13 @@ fields as (
 ),
 
 final as (
-
-    select
+    
+    select 
         id as order_line_id,
         index,
         name,
         order_id,
         fulfillable_quantity,
-        fulfillment_service,
         fulfillment_status,
         gift_card as is_gift_card,
         grams,
@@ -55,22 +54,6 @@ final as (
         variant_inventory_management,
         vendor,
         properties,
-        destination_location_address_1,
-        destination_location_address_2,
-        destination_location_city,
-        destination_location_country_code,
-        destination_location_id,
-        destination_location_name,
-        destination_location_province_code,
-        destination_location_zip,
-        origin_location_address_1,
-        origin_location_address_2,
-        origin_location_city,
-        origin_location_country_code,
-        origin_location_id,
-        origin_location_name,
-        origin_location_province_code,
-        origin_location_zip,
         {{ dbt_date.convert_timezone(column='cast(_fivetran_synced as ' ~ dbt.type_timestamp() ~ ')', target_tz=var('shopify_timezone', "UTC"), source_tz="UTC") }} as _fivetran_synced,
         source_relation
 
@@ -80,5 +63,5 @@ final as (
 
 )
 
-select *
+select * 
 from final

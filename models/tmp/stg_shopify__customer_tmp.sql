@@ -1,8 +1,3 @@
-{%- set source_relation = adapter.get_relation(
-        database=source('shopify', 'customer').database,
-        schema=source('shopify', 'customer').schema,
-        identifier=source('shopify', 'customer').name) -%}
-
 {{
     fivetran_utils.union_data(
         table_identifier='customer', 
