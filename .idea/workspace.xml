@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2f4128a1-f24c-49f0-91f5-0c568dcdd4a9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.buildkite/hooks/pre-command" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildkite/pipeline.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildkite/scripts/run_models.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug-report.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/feature-request.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE/maintainer_pull_request_template.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/pull_request_template.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DECISIONLOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/catalog.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/run_results.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/ci/sample.profiles.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/dbt_project.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/packages.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_abandoned_checkout_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_abandoned_checkout_discount_code_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_abandoned_checkout_shipping_line_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_collection_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_collection_product_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_customer_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_customer_tag_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_discount_code_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_fulfillment_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_fulfillment_event_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_inventory_item_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_inventory_level_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_location_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_metafield_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_adjustment_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_discount_code_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_line_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_line_refund_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_note_attribute_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_shipping_line_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_shipping_tax_line_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_tag_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_order_url_tag_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_price_rule_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_product_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_product_image_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_product_tag_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_product_variant_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_refund_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_shop_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_tax_line_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_tender_transaction_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration_tests/seeds/shopify_transaction_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_abandoned_checkout_discount_code_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_abandoned_checkout_discount_code_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_collection_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_collection_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_collection_product_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_collection_product_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_customer_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_customer_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_customer_tag_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_customer_tag_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_discount_code_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_discount_code_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_fulfillment_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_fulfillment_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_fulfillment_event_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_fulfillment_event_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_inventory_item_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_inventory_item_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_inventory_level_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_inventory_level_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_location_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_location_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_metafield_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_metafield_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_order_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_order_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_order_discount_code_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_order_discount_code_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_order_line_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_order_line_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_order_note_attribute_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_order_note_attribute_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_order_shipping_line_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_order_shipping_line_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_order_shipping_tax_line_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_order_shipping_tax_line_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_order_tag_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_order_tag_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_order_url_tag_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_order_url_tag_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_price_rule_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_price_rule_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_product_image_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_product_image_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_product_tag_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_product_tag_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_shop_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_shop_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_tax_line_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_tax_line_columns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/get_tender_transaction_columns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/macros/get_tender_transaction_columns.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="temp" />
+                    <option name="lastUsedInstant" value="1709840995" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1709840978" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2dKUJDzihcPGsupr1QBfQNNPKUD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "temp",
+    "last_opened_file_path": "/Users/sburkule/Documents/Code/dbt_marquee_shopify_source",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f4128a1-f24c-49f0-91f5-0c568dcdd4a9" name="Changes" comment="" />
+      <created>1709756189976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709756189976</updated>
+      <workItem from="1709756191244" duration="763000" />
+      <workItem from="1709838353046" duration="237000" />
+      <workItem from="1709840162041" duration="407000" />
+      <workItem from="1709840809730" duration="249000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
