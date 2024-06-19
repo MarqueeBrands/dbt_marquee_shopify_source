@@ -1,3 +1,55 @@
+# dbt_shopify_source v0.12.1
+
+## 🪲 Bug Fixes 🪛
+- Added support for a new `delayed` fulfillment event status from Shopify. `delayed` has been added to the `accepted_values` test on `stg_shopify__fulfillment_event` ([PR #84](https://github.com/fivetran/dbt_shopify_source/pull/84)).
+- Added `product_id` to the unique `combination_of_columns` test for the `stg_shopify__product_image` model ([PR #86](https://github.com/fivetran/dbt_shopify_source/pull/86)).
+
+## Contributors
+- [@ryan-brainforge](https://github.com/ryan-brainforge) ([PR #86](https://github.com/fivetran/dbt_shopify_source/pull/86))
+- [@shreveasaurus](https://github.com/shreveasaurus) ([PR #84](https://github.com/fivetran/dbt_shopify_source/pull/84))
+
+# dbt_shopify_source v0.12.0
+
+[PR #79](https://github.com/fivetran/dbt_shopify_source/pull/79) introduces the following changes: 
+## 🚨 Breaking Changes 🚨
+- To reduce storage, updated default materialization of staging models from tables to views. 
+  - Note that `stg_shopify__metafield` will still be materialized as a table for downstream use.
+>  ⚠️ Running a `--full-refresh` will be required if you have previously run these staging models as tables and get the following error: 
+> ```
+> Trying to create view <model path> but it currently exists as a table. Either drop <model path> manually, or run dbt with `--full-refresh` and dbt will drop it for you.
+> ```
+
+## Under the Hood
+- Updated the maintainer PR template to the current format.
+- Added integration testing pipeline for Databricks SQL Warehouse.
+
+[PR #81](https://github.com/fivetran/dbt_shopify_source/pull/81) introduces the following changes: 
+## 🪲 Bug Fixes 🪛
+- Removed the `index` filter in `stg_shopify__order_discount_code`, as we were erroneously filtering out multiple discounts for an order since `index` is meant to pair with `order_id` as the unique identifier for this source.
+- Added `index` as a field in `stg_shopify__order_discount_code`, as it is part of the primary key.
+
+## 📝 Documentation Updates 📝
+- Added `index` documentation to our `src_shopify.yml` and `stg_shopify.yml`.
+- Updated the `unique_combination_of_columns` test on `stg_shopify__order_discount_code` to correctly check on `index` with `order_id` and `source_relation` rather than `code`.
+
+## 🔧 Under the Hood 🔩
+- Updated the pull request templates.
+
+# dbt_shopify_source v0.11.0
+[PR #78](https://github.com/fivetran/dbt_shopify_source/pull/78) introduces the following changes: 
+
+## 🚨 Breaking Changes 🚨
+- Added `source_relation` to the `partition_by` clauses that determine the `is_most_recent_record` in the `stg_shopify__metafield` table.
+- Added `source_relation` to the `partition_by` clauses that determines the `index` in the `stg_shopify__abandoned_checkout_discount_code` table. 
+- If the user is leveraging the union feature, this could change data values.
+
+## 🐛 Bug Fixes 🪛 
+- Updated partition logic in `stg_shopify__metafield` and `stg_shopify__abandoned_checkout_discount_code` to account for null table Redshift errors when handling null field cases. 
+
+## 🚘 Under The Hood 🚘
+- Included auto-releaser GitHub Actions workflow to automate future releases.
+- Added additional casting in seed dependencies for above models `integration_tests/dbt_project.yml` to ensure local testing passed on null cases.
+
 # dbt_shopify_source v0.10.0
 ## 🚨 Breaking Changes 🚨
 - This release will be a breaking change due to the removal of below dependencies.
