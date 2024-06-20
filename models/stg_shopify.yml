@@ -1289,7 +1289,6 @@ models:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - product_image_id
-            - product_id
             - source_relation
     columns:
       - name: _fivetran_synced
@@ -1543,7 +1542,7 @@ models:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - order_id
-            - index
+            - code
             - source_relation
     columns:
       - name: _fivetran_synced
@@ -1562,9 +1561,6 @@ models:
         description: The type of discount - `fixed_amount`, `percentage`, or `shipping`.
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: index
-        description: Pairs with `order_id` to provide unique identifier for order discount code.
-      
 
   - name: stg_shopify__abandoned_checkout_shipping_line
     description: Shipping lines associated with abandoned checkouts.
@@ -1669,7 +1665,7 @@ models:
           - failure: Something went wrong when pulling tracking information for the shipment, such as the tracking number was invalid or the shipment was canceled.
         tests:
           - accepted_values:
-              values:  ['attempted_delivery', 'delayed', 'delivered', 'failure', 'in_transit', 'out_for_delivery', 'ready_for_pickup', 'picked_up', 'label_printed', 'label_purchased', 'confirmed']
+              values:  ['attempted_delivery', 'delivered', 'failure', 'in_transit', 'out_for_delivery', 'ready_for_pickup', 'picked_up', 'label_printed', 'label_purchased', 'confirmed']
               config:
                 severity: warn # we pivot these out in shopify__daily_shop
       - name: updated_at
